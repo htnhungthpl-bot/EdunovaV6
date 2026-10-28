@@ -42,9 +42,9 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* Top brand notification banner */}
       <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-white text-xs py-1 px-4 text-center font-medium flex items-center justify-center gap-2">
         <Sparkles className="w-3.5 h-3.5 shrink-0" />
-        <span className="font-semibold">EDUNOVA – Nền tảng giáo dục thông minh</span>
+        <span className="font-semibold">EDUNOVA Writing Coach – Viết hay hơn mỗi ngày!</span>
         <span className="hidden md:inline text-amber-200">•</span>
-        <span className="hidden md:inline italic">Đổi mới cách học – Bứt phá tri thức</span>
+        <span className="hidden md:inline italic">Trợ lý AI đồng hành cùng học sinh lớp 4 phát triển kỹ năng viết Văn</span>
       </div>
 
       <div className="px-4 sm:px-6 lg:px-8">

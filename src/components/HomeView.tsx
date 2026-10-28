@@ -28,7 +28,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate, currentUser }) =
         <div className="relative w-full overflow-hidden bg-amber-50/50">
           <img
             src="/assets/aistudio/EDUNOVA__Vi_t_hay_h_n_m_i_ng_y_f83b0b50.png"
-            alt="EDUNOVA Writing Coach – Viết hay hơn mỗi ngày"
+            alt="EDUNOVA Writing Coach – Viết hay hơn mỗi ngày! Trợ lý AI đồng hành cùng học sinh lớp 4 phát triển kỹ năng viết Văn"
             className="w-full h-auto object-cover max-h-[580px] rounded-t-3xl"
           />
         </div>

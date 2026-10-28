@@ -260,9 +260,9 @@ export default function App() {
         <footer className="mt-auto border-t border-amber-200/80 bg-white/80 py-6 text-center text-xs text-slate-500">
           <div className="max-w-7xl mx-auto px-4 space-y-1.5">
             <div className="flex items-center justify-center gap-2 font-bold text-slate-700">
-              <span>EDUNOVA – Nền tảng giáo dục thông minh</span>
+              <span>EDUNOVA Writing Coach – Viết hay hơn mỗi ngày!</span>
               <span>•</span>
-              <span className="text-amber-600">Đổi mới cách học – Bứt phá tri thức</span>
+              <span className="text-amber-600">Trợ lý AI đồng hành cùng học sinh lớp 4 phát triển kỹ năng viết Văn</span>
             </div>
             <p>
               Hệ thống trợ lý học tập thông minh EDUNOVA | Hotline hỗ trợ: 0973793366

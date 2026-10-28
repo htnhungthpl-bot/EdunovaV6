@@ -137,7 +137,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 </span>
               </div>
               <p className="text-[11px] text-slate-500 font-medium">
-                Writing Coach – Luyện viết văn
+                Writing Coach – Viết hay hơn mỗi ngày!
               </p>
             </div>
           </div>
@@ -200,7 +200,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
 
           <p className="text-[11px] text-sky-950 font-medium leading-relaxed">
-            "Viết hay hơn mỗi ngày – Đổi mới cách học, bứt phá tri thức!"
+            "Viết hay hơn mỗi ngày – Trợ lý AI đồng hành cùng học sinh lớp 4 phát triển kỹ năng viết Văn"
           </p>
         </div>
 
