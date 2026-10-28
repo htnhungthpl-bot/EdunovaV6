@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          var _currentFetch = typeof _origFetch === 'function' ? _origFetch.bind(window) : _origFetch;
+          try {
+            Object.defineProperty(window, 'fetch', {
+              get: function() { return _currentFetch; },
+              set: function(val) { _currentFetch = val; },
+              configurable: true,
+              enumerable: true
+            });
+          } catch (e1) {
+            try {
+              var proto = Object.getPrototypeOf(window) || (typeof Window !== 'undefined' && Window.prototype);
+              if (proto) {
+                Object.defineProperty(proto, 'fetch', {
+                  get: function() { return _currentFetch; },
+                  set: function(val) { _currentFetch = val; },
+                  configurable: true,
+                  enumerable: true
+                });
+              }
+            } catch (e2) {}
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <title>EDUNOVA Writing Coach – Trợ lý AI luyện viết Tiếng Việt lớp 4</title>
+    <meta name="description" content="Nền tảng giáo dục thông minh EDUNOVA - Đổi mới cách học, bứt phá tri thức. Trợ lý AI luyện viết văn miêu tả và tập làm văn lớp 4." />
+    <meta property="og:title" content="EDUNOVA Writing Coach – Trợ lý AI luyện viết Tiếng Việt lớp 4" />
+    <meta property="og:description" content="Nền tảng giáo dục thông minh EDUNOVA - Đổi mới cách học, bứt phá tri thức. Trợ lý AI luyện viết văn miêu tả và tập làm văn lớp 4." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/aistudio/EDUNOVA__Vi_t_hay_h_n_m_i_ng_y_f83b0b50.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/assets/aistudio/EDUNOVA__Vi_t_hay_h_n_m_i_ng_y_f83b0b50.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Quicksand:wght@500;600;700&family=Patrick+Hand&subset=vietnamese&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-amber-50/40 text-slate-800 antialiased font-sans selection:bg-amber-200 selection:text-amber-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "V5EDUNOVA Writing Coach – Viết hay hơn mỗi ngày!",
+  "description": "EDUNOVA Writing Coach – Viết hay hơn mỗi ngày!\nTrợ lý AI đồng hành cùng học sinh lớp 4 phát triển kỹ năng viết Văn\n",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

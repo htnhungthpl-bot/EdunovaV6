@@ -1,0 +1,322 @@
+import { StudentBadge, StudentAchievement, StudentLevelInfo } from "../types/achievements";
+
+export const STUDENT_LEVELS: StudentLevelInfo[] = [
+  {
+    level: 1,
+    title: "Cây bút Tập sự",
+    badgeIcon: "🌱",
+    minStars: 0,
+    maxStars: 50,
+    nextLevelTitle: "Búp măng non",
+    description: "Bước đầu làm quen với câu chữ, học cách quan sát và diễn đạt ý nghĩ tự nhiên."
+  },
+  {
+    level: 2,
+    title: "Búp măng non",
+    badgeIcon: "🌿",
+    minStars: 51,
+    maxStars: 120,
+    nextLevelTitle: "Cây bút Triển vọng",
+    description: "Biết mở rộng câu, dùng từ chỉ màu sắc, âm thanh và lập dàn ý bài văn mạch lạc."
+  },
+  {
+    level: 3,
+    title: "Cây bút Triển vọng",
+    badgeIcon: "✍️",
+    minStars: 121,
+    maxStars: 220,
+    nextLevelTitle: "Cây bút Sáng giá",
+    description: "Vận dụng khéo léo từ láy, biện pháp so sánh và nhân hóa giúp bài văn giàu cảm xúc."
+  },
+  {
+    level: 4,
+    title: "Cây bút Sáng giá",
+    badgeIcon: "⭐",
+    minStars: 221,
+    maxStars: 350,
+    nextLevelTitle: "Bậc thầy Ngôn từ nhí",
+    description: "Bài viết có bố cục sáng rõ, lời văn uyển chuyển, giàu tính quan sát thực tế sâu sắc."
+  },
+  {
+    level: 5,
+    title: "Bậc thầy Ngôn từ nhí",
+    badgeIcon: "👑",
+    minStars: 351,
+    maxStars: 9999,
+    description: "Đạt tới sự tự tin tuyệt đối, câu văn tỏa sáng, truyền cảm hứng và sáng tạo không ngừng!"
+  }
+];
+
+export const ALL_STUDENT_BADGES: Omit<StudentBadge, "isUnlocked" | "unlockedAt">[] = [
+  {
+    id: "badge-word-painter",
+    title: "Họa sĩ ngôn từ",
+    category: "creativity",
+    categoryName: "Sáng tạo & Biện pháp tu từ",
+    description: "Sử dụng thành thạo từ 10 hình ảnh so sánh và nhân hóa sinh động trong các bài làm văn.",
+    requirementDescription: "Dùng từ 10 biện pháp tu từ (so sánh, nhân hóa) trong các bài tập viết.",
+    icon: "🎨",
+    color: "emerald",
+    bgGradient: "from-emerald-500 to-teal-600",
+    borderColor: "border-emerald-300",
+    rewardStars: 20,
+    rarity: "Hiếm",
+    pedagogicalTip: "Hình ảnh so sánh và nhân hóa giống như những sắc màu rực rỡ biến bài văn thành một bức tranh tuyệt đẹp!"
+  },
+  {
+    id: "badge-perfect-10",
+    title: "Bông hoa điểm 10",
+    category: "writing",
+    categoryName: "Tập làm văn xuất sắc",
+    description: "Được cô giáo chủ nhiệm chấm bài văn đạt từ 9.0 điểm trở lên hoặc bài viết được chọn làm mẫu.",
+    requirementDescription: "Đạt từ 9.0 điểm trong bài văn được giáo viên đánh giá.",
+    icon: "🌸",
+    color: "rose",
+    bgGradient: "from-rose-500 to-pink-600",
+    borderColor: "border-rose-300",
+    rewardStars: 30,
+    rarity: "Sử thi",
+    pedagogicalTip: "Một bài văn hay không chỉ đúng ngữ pháp mà còn chạm đến trái tim người đọc bằng cảm xúc chân thành!"
+  },
+  {
+    id: "badge-nature-explorer",
+    title: "Nhà thám hiểm thiên nhiên",
+    category: "writing",
+    categoryName: "Tập làm văn xuất sắc",
+    description: "Hoàn thành xuất sắc các bài văn miêu tả cây cối, con vật hoặc cảnh đẹp quê hương đất nước.",
+    requirementDescription: "Hoàn thành bài viết thuộc chủ đề Miêu tả thiên nhiên hoặc loài vật.",
+    icon: "🌿",
+    color: "teal",
+    bgGradient: "from-teal-500 to-cyan-600",
+    borderColor: "border-teal-300",
+    rewardStars: 15,
+    rarity: "Phổ biến",
+    pedagogicalTip: "Hãy quan sát thiên nhiên bằng mọi giác quan: lắng nghe tiếng gió, ngắm sắc lá và cảm nhận hương hoa nhé!"
+  },
+  {
+    id: "badge-master-storyteller",
+    title: "Người kể chuyện diệu kỳ",
+    category: "writing",
+    categoryName: "Tập làm văn xuất sắc",
+    description: "Viết bài văn kể lại câu chuyện hoặc một sự việc em đã trải nghiệm với mở đầu và kết bài hấp dẫn.",
+    requirementDescription: "Hoàn thành bài văn Kể chuyện hoặc Sự việc chứng kiến/tham gia.",
+    icon: "🏛️",
+    color: "indigo",
+    bgGradient: "from-indigo-500 to-purple-600",
+    borderColor: "border-indigo-300",
+    rewardStars: 20,
+    rarity: "Hiếm",
+    pedagogicalTip: "Một câu chuyện hay luôn có chi tiết bất ngờ, diễn biến hợp lý và mang lại bài học ý nghĩa!"
+  },
+  {
+    id: "badge-diamond-vault",
+    title: "Kho báu kim cương",
+    category: "creativity",
+    categoryName: "Sáng tạo & Biện pháp tu từ",
+    description: "Lưu giữ từ 5 ý tưởng quan sát thực tế hoặc từ ngữ hay trong Sổ tay Kim cương.",
+    requirementDescription: "Tạo từ 5 ghi chép đắt giá trong Sổ tay Kim cương cá nhân.",
+    icon: "💎",
+    color: "cyan",
+    bgGradient: "from-cyan-500 to-blue-600",
+    borderColor: "border-cyan-300",
+    rewardStars: 15,
+    rarity: "Phổ biến",
+    pedagogicalTip: "Mỗi chi tiết hay tích lũy hằng ngày sẽ là viên ngọc quý làm sáng bừng bài văn của em!"
+  },
+  {
+    id: "badge-spectacular-revision",
+    title: "Bứt phá ngoạn mục",
+    category: "effort",
+    categoryName: "Chăm chỉ & Chuyên cần",
+    description: "Tự chỉnh sửa, trau chuốt và nâng cấp bài viết sau khi nhận nhận xét của thầy cô hoặc gợi ý của AI Coach.",
+    requirementDescription: "Nộp bài chỉnh sửa (phiên bản hoàn thiện) dựa trên góp ý sư phạm.",
+    icon: "🚀",
+    color: "amber",
+    bgGradient: "from-amber-500 to-orange-600",
+    borderColor: "border-amber-300",
+    rewardStars: 25,
+    rarity: "Hiếm",
+    pedagogicalTip: "Nhà văn vĩ đại không phải là người viết một lần xong ngay, mà là người biết kiên nhẫn sửa câu giũa chữ!"
+  },
+  {
+    id: "badge-sentence-architect",
+    title: "Kiến trúc sư câu từ",
+    category: "challenge",
+    categoryName: "Thử thách ngôn ngữ vui",
+    description: "Chinh phục đấu trường Xây câu thần tốc, ghép đúng trật tự ngữ pháp các câu văn sinh động.",
+    requirementDescription: "Hoàn thành ít nhất 3 vòng thử thách Xây câu thần tốc.",
+    icon: "🌉",
+    color: "emerald",
+    bgGradient: "from-emerald-500 to-teal-600",
+    borderColor: "border-emerald-300",
+    rewardStars: 20,
+    rarity: "Phổ biến",
+    pedagogicalTip: "Nắm chắc Chủ ngữ và Vị ngữ là chiếc chìa khóa giúp em xây dựng những câu văn vững chãi và lưu loát."
+  },
+  {
+    id: "badge-super-detective",
+    title: "Thám tử chính tả",
+    category: "challenge",
+    categoryName: "Thử thách ngôn ngữ vui",
+    description: "Lần tìm và phục hồi chuẩn xác các lỗi chính tả tinh vi (l/n, s/x, tr/ch, d/gi/r, dấu hỏi/ngã).",
+    requirementDescription: "Phá án thành công ít nhất 3 vụ án chính tả.",
+    icon: "🔍",
+    color: "sky",
+    bgGradient: "from-sky-500 to-blue-600",
+    borderColor: "border-sky-300",
+    rewardStars: 20,
+    rarity: "Phổ biến",
+    pedagogicalTip: "Chính tả chuẩn xác thể hiện sự tôn trọng bạn đọc và làm cho lời văn của em thêm phần trong sáng."
+  },
+  {
+    id: "badge-vivid-words-king",
+    title: "Vua từ láy & từ gợi cảm",
+    category: "challenge",
+    categoryName: "Thử thách ngôn ngữ vui",
+    description: "Thấu hiểu mọi tầng sắc thái biểu cảm, chọn từ láy tượng thanh tượng hình đắt giá nhất.",
+    requirementDescription: "Vượt qua ít nhất 3 vòng thách đấu Vua từ láy & từ gợi cảm.",
+    icon: "👑",
+    color: "amber",
+    bgGradient: "from-amber-500 to-orange-500",
+    borderColor: "border-amber-300",
+    rewardStars: 25,
+    rarity: "Hiếm",
+    pedagogicalTip: "Một từ láy gợi cảm đặt đúng chỗ có sức gợi gấp mười lần những câu văn dài dòng!"
+  },
+  {
+    id: "badge-sentence-smith",
+    title: "Thợ rèn câu văn kỳ diệu",
+    category: "challenge",
+    categoryName: "Thử thách ngôn ngữ vui",
+    description: "Tôi luyện câu văn qua 4 cấp độ: đủ ngữ pháp, giàu chi tiết, đắt từ gợi cảm và bay bổng nghệ thuật.",
+    requirementDescription: "Hoàn thành tôi luyện thành công ít nhất 2 cấp độ trong Lò rèn câu văn.",
+    icon: "⚒️",
+    color: "rose",
+    bgGradient: "from-rose-500 to-red-600",
+    borderColor: "border-rose-300",
+    rewardStars: 30,
+    rarity: "Sử thi",
+    pedagogicalTip: "Biết mở rộng câu và thêm chất liệu đời sống sẽ giúp mỗi dòng văn của em tràn đầy sức sống."
+  },
+  {
+    id: "badge-streak-fire",
+    title: "Ngọn lửa chuyên cần",
+    category: "effort",
+    categoryName: "Chăm chỉ & Chuyên cần",
+    description: "Kiên trì rèn luyện thói quen viết văn 5 ngày liên tiếp cùng EDUNOVA.",
+    requirementDescription: "Đạt chuỗi học tập (streak) từ 5 ngày liên tiếp.",
+    icon: "🔥",
+    color: "orange",
+    bgGradient: "from-orange-500 to-red-500",
+    borderColor: "border-orange-300",
+    rewardStars: 25,
+    rarity: "Hiếm",
+    pedagogicalTip: "Học đều đặn mỗi ngày một chút quý hơn học dồn một lúc. Sự kiên trì sẽ làm nên kỳ tích!"
+  },
+  {
+    id: "badge-grandmaster",
+    title: "Đại kiện tướng ngôn ngữ",
+    category: "creativity",
+    categoryName: "Thành tựu đỉnh cao",
+    description: "Tích lũy từ 150 sao thưởng và chinh phục toàn diện các thử thách tiếng Việt lớp 4.",
+    requirementDescription: "Đạt tổng từ 150 sao thưởng tích lũy trên hệ thống.",
+    icon: "🏆",
+    color: "yellow",
+    bgGradient: "from-yellow-400 via-amber-500 to-orange-600",
+    borderColor: "border-yellow-400",
+    rewardStars: 50,
+    rarity: "Huyền thoại",
+    pedagogicalTip: "Em là niềm tự hào của lớp học! Hãy tiếp tục lan tỏa niềm say mê tiếng Việt đến bạn bè nhé!"
+  }
+];
+
+export const INITIAL_ACHIEVEMENTS_TEMPLATE: Omit<StudentAchievement, "currentValue" | "isCompleted" | "isClaimed" | "claimedAt">[] = [
+  {
+    id: "ach-first-essay",
+    title: "Khởi đầu rực rỡ",
+    category: "writing",
+    description: "Hoàn thành và nộp bài tập làm văn đầu tiên cho giáo viên chủ nhiệm.",
+    icon: "✍️",
+    targetValue: 1,
+    unit: "bài viết",
+    tier: "bronze",
+    rewardStars: 15
+  },
+  {
+    id: "ach-essay-milestone-5",
+    title: "Cây bút cần mẫn",
+    category: "writing",
+    description: "Chăm chỉ hoàn thành 5 bài tập làm văn trong kho bài học SGK Lớp 4.",
+    icon: "📚",
+    targetValue: 5,
+    unit: "bài viết",
+    tier: "silver",
+    rewardStars: 30
+  },
+  {
+    id: "ach-high-score-master",
+    title: "Hoa điểm tốt",
+    category: "writing",
+    description: "Đạt từ 2 bài văn được giáo viên đánh giá xuất sắc (từ 8.5 điểm trở lên).",
+    icon: "🌸",
+    targetValue: 2,
+    unit: "bài điểm cao",
+    tier: "gold",
+    rewardStars: 40
+  },
+  {
+    id: "ach-diamond-collector",
+    title: "Nhà sưu tầm ý tưởng",
+    category: "creativity",
+    description: "Thu thập từ 5 câu văn hoặc từ vựng đắt giá vào Sổ tay Kim cương.",
+    icon: "💎",
+    targetValue: 5,
+    unit: "ghi chép",
+    tier: "bronze",
+    rewardStars: 20
+  },
+  {
+    id: "ach-challenge-explorer",
+    title: "Chiến binh thử thách",
+    category: "challenge",
+    description: "Tích lũy từ 50 điểm thưởng từ 4 trò chơi ngôn ngữ trong Đấu trường thử thách.",
+    icon: "⭐",
+    targetValue: 50,
+    unit: "điểm thử thách",
+    tier: "silver",
+    rewardStars: 25
+  },
+  {
+    id: "ach-challenge-all-round",
+    title: "Chinh phục 4 đấu trường",
+    category: "challenge",
+    description: "Chinh phục ít nhất 1 câu đúng ở cả 4 trò chơi (Xây câu, Chính tả, Từ láy, Thợ rèn).",
+    icon: "🎯",
+    targetValue: 4,
+    unit: "đấu trường",
+    tier: "gold",
+    rewardStars: 35
+  },
+  {
+    id: "ach-streak-champion",
+    title: "Chiến binh kiên trì",
+    category: "effort",
+    description: "Duy trì chuỗi ngày đăng nhập và rèn luyện liên tục 5 ngày.",
+    icon: "🔥",
+    targetValue: 5,
+    unit: "ngày liên tiếp",
+    tier: "silver",
+    rewardStars: 30
+  },
+  {
+    id: "ach-star-century",
+    title: "Trăm sao tỏa sáng",
+    category: "creativity",
+    description: "Tích lũy đạt mốc 100 ngôi sao thưởng trên bảng thành tích học tập.",
+    icon: "🌟",
+    targetValue: 100,
+    unit: "sao thưởng",
+    tier: "diamond",
+    rewardStars: 50
+  }
+];
